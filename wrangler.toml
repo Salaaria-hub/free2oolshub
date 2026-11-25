@@ -1,0 +1,7 @@
+name = "freetoolshub"
+compatibility_date = "2025-01-15"
+pages_build_output_dir = "."
+
+# This config is for Cloudflare Pages deployment via Wrangler CLI
+# Deploy with: npm run deploy
+# First deploy will open browser for Cloudflare authentication

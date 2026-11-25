@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeToolsHub Terms of Use — Legal Information</title>
+  <meta name="description" content="FreeToolsHub Terms of Use outline acceptable behavior, liability limits, and intellectual property rights for the free web utilities.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freetoolshub.pages.dev/terms.html">
+  <style>
+    :root{--primary:#6366f1;--bg:#f9fafb;--text:#1f2937;--card:#ffffff;--border:#e5e7eb}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:0;line-height:1.65}
+    .container{max-width:800px;margin:auto;padding:2rem 1.25rem}
+    header{background:var(--primary);color:#fff;padding:1.5rem;text-align:center}
+    h2{margin-top:1.5rem;margin-bottom:.5rem}
+    a{color:var(--primary);text-decoration:none}
+    .back{margin-bottom:1.25rem;display:inline-block;font-weight:600}
+    footer{background:var(--card);border-top:1px solid var(--border);padding:1.25rem;margin-top:2rem;text-align:center}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Terms of Use</h1>
+</header>
+<div class="container">
+  <a href="index.html" class="back">← Back to Home</a>
+  <p><strong>Last updated:</strong> <span id="terms-date"></span></p>
+
+  <h2>1. Use of Service</h2>
+  <p>
+    FreeToolsHub provides client-side utilities at no cost for both personal and
+    commercial workflows, subject to these terms.
+  </p>
+
+  <h2>2. Acceptable Use</h2>
+  <p>
+    You agree not to use the website for unlawful purposes, to distribute malware,
+    or to disrupt or attempt to overload the hosting infrastructure.
+  </p>
+
+  <h2>3. No Warranties</h2>
+  <p>
+    The tools are provided "as is" without warranties of any kind, express or implied,
+    including fitness for a particular purpose or uninterrupted availability.
+  </p>
+
+  <h2>4. Limitation of Liability</h2>
+  <p>
+    To the maximum extent permitted by law, FreeToolsHub shall not be liable for any
+    indirect, incidental, special, or consequential damages resulting from your use
+    of the tools or any output files.
+  </p>
+
+  <h2>5. Intellectual Property</h2>
+  <p>
+    All site branding, layout, and original source code are owned by FreeToolsHub.
+    You retain full ownership of all files you process in your browser.
+  </p>
+
+  <h2>6. Advertising</h2>
+  <p>
+    The site may display third-party advertisements such as Google AdSense. We are
+    not responsible for the content or practices of external advertisers.
+  </p>
+
+  <h2>7. Changes</h2>
+  <p>
+    We reserve the right to update these terms at any time. Continued use of the
+    site after changes constitutes acceptance of the revised terms.
+  </p>
+
+  <h2>8. Contact</h2>
+  <p>
+    For questions about these terms, please email
+    <a href="mailto:contact@freetoolshub.pages.dev">contact@freetoolshub.pages.dev</a>.
+  </p>
+</div>
+
+<footer>
+  © <span id="yr"></span> FreeToolsHub — All rights reserved.
+</footer>
+<script>
+  const now = new Date();
+  document.getElementById('terms-date').textContent = now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  document.getElementById('yr').textContent = now.getFullYear();
+</script>
+</body>
+</html>

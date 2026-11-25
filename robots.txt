@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://freetoolshub.pages.dev/sitemap.xml

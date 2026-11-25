@@ -1,0 +1,17 @@
+{
+  "name": "freetoolshub",
+  "version": "1.0.0",
+  "description": "Free online image, PDF, and utility tools — 100% client-side",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler pages deploy . --project-name=freetoolshub",
+    "preview": "npx serve .",
+    "test:links": "echo 'Manually test links at http://localhost:8080'"
+  },
+  "keywords": ["tools", "image-compressor", "pdf-merge", "qr-generator"],
+  "author": "FreeToolsHub",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.78.0"
+  }
+}

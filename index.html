@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Online Image &amp; PDF Tools — Compress, Resize, Convert, Merge</title>
+  <meta name="description" content="FreeToolsHub offers 8 client-side utilities: image compressor, resizer, converter, image-to-PDF, PDF merge, QR generator, word counter and password generator — 100% free, no uploads.">
+  <meta name="keywords" content="image compressor, image resizer, image converter, image to pdf, pdf merge, qr code generator, word counter, password generator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freetoolshub.pages.dev/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Online Image &amp; PDF Tools — Compress, Resize, Convert, Merge">
+  <meta property="og:description" content="FreeToolsHub provides eight free, client-side web tools for images and PDFs. No registration, no server, your files never leave the browser.">
+  <meta property="og:url" content="https://freetoolshub.pages.dev/">
+  <!-- WebApplication schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "FreeToolsHub",
+    "url": "https://freetoolshub.pages.dev/",
+    "description": "A collection of free, client-side image and PDF utilities that run completely in the browser.",
+    "applicationCategory": "Utilities",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <!-- Placeholder for AdSense script (uncomment after approval) -->
+  <!-- <script data-ad-client="ca-pub-xxxxxxxxxxxx" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+  <style>
+    :root{
+      --primary:#6366f1;
+      --primary-dark:#4f46e5;
+      --bg:#f9fafb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --border:#e5e7eb;
+      --accent:#10b981;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    header{position:sticky;top:0;background:var(--card);box-shadow:0 1px 3px rgba(0,0,0,.05);z-index:10;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:.5rem 1.5rem}
+    .logo{font-size:1.4rem;font-weight:700;padding:.5rem 0;display:inline-block}
+    nav{display:flex;flex-wrap:wrap;gap:.25rem}
+    nav a{color:var(--text);text-decoration:none;padding:.5rem .9rem;border-radius:8px;font-weight:500}
+    nav a:hover{background:var(--bg)}
+    nav a.active{background:var(--primary);color:#fff}
+    .hero{background:linear-gradient(135deg,var(--primary),#8b5cf6);color:#fff;padding:3rem 1rem;text-align:center}
+    .hero h1{font-size:2.3rem;margin-bottom:.5rem}
+    .hero p{font-size:1.15rem;max-width:700px;margin:auto;opacity:.95}
+    .toggle-sidebar{display:none;background:var(--primary);color:#fff;border:none;border-radius:8px;padding:.5rem 1rem;margin:1rem 1rem 0;cursor:pointer;font-weight:600}
+    .container{display:flex;max-width:1200px;margin:auto;padding:1rem;gap:1.25rem}
+    aside{width:260px;flex-shrink:0}
+    aside ul{list-style:none;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:.5rem;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+    aside li{margin-bottom:.25rem}
+    aside a{display:block;padding:.6rem 1rem;color:var(--text);text-decoration:none;border-radius:8px;font-weight:500}
+    aside a:hover{background:var(--bg)}
+    aside a.active{background:var(--primary);color:#fff}
+    main{flex:1;min-width:0}
+    .tool-section{display:none;padding:1.5rem}
+    .tool-section.active{display:block}
+    .tool-section h2{font-size:1.6rem;margin-bottom:.35rem}
+    .tool-section .lead{color:var(--muted);margin-bottom:1rem}
+    .tool-section h3{margin-top:1.4rem;margin-bottom:.5rem;font-size:1.15rem}
+    .tool-section ol,.tool-section ul{margin-left:1.25rem;margin-bottom:.75rem}
+    .tool-section details{border:1px solid var(--border);border-radius:8px;padding:.65rem .9rem;margin-bottom:.5rem;background:var(--bg)}
+    .tool-section summary{font-weight:600;cursor:pointer}
+    .tool-ui{margin:1rem 0;padding:1rem;background:var(--bg);border:1px solid var(--border);border-radius:10px}
+    .tool-ui label{display:block;margin-bottom:.75rem;font-weight:500}
+    .tool-ui input[type="checkbox"]{width:auto;margin-right:.4rem}
+    .tool-ui button{margin-top:.5rem;margin-right:.5rem}
+    .result-box{margin-top:1rem;padding:.75rem 1rem;background:#ecfdf5;color:#065f46;border-radius:8px;border:1px solid #a7f3d0}
+    .result-box:empty{display:none}
+    .result-box a{color:#047857;font-weight:600;display:inline-block;margin:.25rem 0}
+    .ad-placeholder{
+      background:#e5e7eb;
+      border:2px dashed #9ca3af;
+      text-align:center;
+      padding:2rem 1rem;
+      margin:1rem 0;
+      min-height:90px;
+      font-style:italic;
+      color:#6b7280;
+      border-radius:8px;
+    }
+    footer{background:var(--card);border-top:1px solid var(--border);padding:2rem 1.5rem;margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+    footer h4{margin-bottom:.5rem}
+    footer a{color:var(--primary);text-decoration:none}
+    footer a:hover{text-decoration:underline}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:1rem;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+    button{background:var(--primary);color:#fff;border:none;border-radius:8px;padding:.6rem 1.1rem;cursor:pointer;font-size:.95rem;font-weight:500}
+    button:hover{background:var(--primary-dark)}
+    input,select,textarea{width:100%;padding:.55rem .75rem;border:1px solid var(--border);border-radius:8px;margin-top:.3rem;font-family:inherit;font-size:.95rem;background:#fff}
+    .stat-card{background:#ecfdf5;color:#065f46;padding:1rem;border-radius:8px;text-align:center;border:1px solid #a7f3d0}
+    .stat-card h4{font-size:2rem;margin-bottom:.3rem;color:var(--primary)}
+    @media(max-width:900px){
+      .container{flex-direction:column}
+      aside{display:none;width:100%}
+      aside.open{display:block}
+      .toggle-sidebar{display:inline-block}
+    }
+    @media(max-width:600px){
+      .hero h1{font-size:1.75rem}
+      .hero p{font-size:1rem}
+      header{padding:.5rem 1rem}
+    }
+  </style>
+</head>
+<body>
+<noscript>
+<div style="padding:20px;max-width:900px;margin:auto">
+<h1>Free Online Image & PDF Tools</h1>
+<p>FreeToolsHub offers 8 free client-side tools: Image Compressor, Image Resizer, Image Converter, Image to PDF, PDF Merge, QR Code Generator, Word Counter, and Password Generator. All tools run entirely in your browser — files never leave your device.</p>
+<h2>Image Compressor</h2>
+<p>Compress JPG and PNG images by up to 80% without quality loss. Batch process multiple images at once. Free, no signup.</p>
+<h2>Image Resizer</h2>
+<p>Resize any image to exact pixel dimensions. Maintain aspect ratio to avoid distortion. Perfect for social media, websites, printing.</p>
+<h2>Image Converter</h2>
+<p>Convert between JPG, PNG, and WebP formats. WebP gives 25-35% smaller files. Free browser-based conversion.</p>
+<h2>Image to PDF</h2>
+<p>Convert one or multiple images into a single PDF. Each image becomes an A4 page, centered and scaled to fit.</p>
+<h2>PDF Merge</h2>
+<p>Merge multiple PDF files into one document. Preserves original quality. No upload — files stay on your device.</p>
+<h2>QR Code Generator</h2>
+<p>Generate QR codes for URLs, text, or any data. Adjustable size up to 1000px. Static codes never expire.</p>
+<h2>Word Counter</h2>
+<p>Count words, characters, sentences, and paragraphs in real time. Includes reading time estimate based on 200 words per minute.</p>
+<h2>Password Generator</h2>
+<p>Generate cryptographically secure passwords up to 64 characters. Customize uppercase, lowercase, numbers, and symbols.</p>
+</div>
+</noscript>
+<header>
+  <span class="logo">🛠️ FreeToolsHub</span>
+  <nav>
+    <a href="#compress-image" class="nav-link">Image Tools</a>
+    <a href="#pdf-merge" class="nav-link">PDF Tools</a>
+    <a href="#qr-generator" class="nav-link">Utilities</a>
+    <a href="blog/" class="nav-link">Blog</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Free, Fast, Fully Browser-Based Tools</h1>
+  <p>Compress, resize, convert, merge, generate QR codes, count words and create passwords — all without uploading a single byte.</p>
+</div>
+
+<button class="toggle-sidebar" onclick="toggleSidebar()">☰ Tools Menu</button>
+
+<div class="container">
+  <aside id="sidebar">
+    <ul>
+      <li><a href="#compress-image" class="side-link">Image Compressor</a></li>
+      <li><a href="#resize-image" class="side-link">Image Resizer</a></li>
+      <li><a href="#convert-image" class="side-link">Image Converter</a></li>
+      <li><a href="#image-to-pdf" class="side-link">Image to PDF</a></li>
+      <li><a href="#pdf-merge" class="side-link">PDF Merge</a></li>
+      <li><a href="#qr-generator" class="side-link">QR Code Generator</a></li>
+      <li><a href="#word-counter" class="side-link">Word Counter</a></li>
+      <li><a href="#password-generator" class="side-link">Password Generator</a></li>
+    </ul>
+  </aside>
+
+  <main id="main-content">
+    <!-- Top ad -->
+    <div class="ad-placeholder">
+      <!-- Replace with AdSense ad unit code after approval -->
+      Top Banner – 728×90
+    </div>
+
+    <!-- 1. Image Compressor -->
+    <section id="compress-image" class="tool-section card">
+      <h2>Free Online Image Compressor</h2>
+      <p class="lead">Shrink large photos in seconds while keeping visual quality — 100% free, no signup, and files never leave your browser.</p>
+      <div class="tool-ui">
+        <label for="compress-input">Select images (JPEG/PNG/WebP): <input type="file" id="compress-input" multiple accept="image/*"></label>
+        <label for="compress-quality">Quality: <span id="compress-quality-val">80%</span><input type="range" id="compress-quality" min="10" max="100" value="80"></label>
+        <button type="button" onclick="runCompress()">Compress Images</button>
+        <div id="compress-output" class="result-box"></div>
+      </div>
+      <h3>How to Use the Image Compressor</h3>
+      <ol>
+        <li>Choose one or more picture files from your device.</li>
+        <li>Slide the quality bar between 10% and 100% to pick your compression level.</li>
+        <li>Click "Compress Images" to process them locally on an HTML5 canvas.</li>
+        <li>Download each reduced JPEG file using the generated link.</li>
+      </ol>
+      <h3>Features</h3>
+      <ul>
+        <li>Batch processing of multiple images in one click.</li>
+        <li>Live quality slider with instant percentage readout.</li>
+        <li>100% client-side execution — your files never leave your browser.</li>
+        <li>Outputs optimized JPEG files with a <code>compressed-</code> filename prefix.</li>
+      </ul>
+      <h3>Frequently Asked Questions</h3>
+      <details><summary>Will my photos be stored on a server?</summary><p>No. All compression runs locally inside your browser using HTML5 Canvas, so no image data is ever transmitted.</p></details>
+      <details><summary>What file formats are supported?</summary><p>JPEG, PNG, and WebP images are accepted; each output is encoded as a compressed JPEG.</p></details>
+      <details><summary>Can I revert a compressed image?</summary><p>Compression is lossy, so keep your original file if you ever need the uncompressed version.</p></details>
+    </section>
+
+    <!-- 2. Image Resizer -->
+    <section id="resize-image" class="tool-section card">
+      <h2>Free Online Image Resizer</h2>
+      <p class="lead">Adjust pixel dimensions of any picture instantly — keep aspect ratio or set exact width and height, 100% free with no signup.</p>
+      <div class="tool-ui">
+        <label for="resize-input">Select image: <input type="file" id="resize-input" accept="image/*"></label>
+        <label for="resize-width">Width (px): <input type="number" id="resize-width" min="1" placeholder="e.g. 1200"></label>
+        <label for="resize-height">Height (px): <input type="number" id="resize-height" min="1" placeholder="e.g. 800"></label>
+        <label><input type="checkbox" id="resize-aspect" checked> Maintain aspect ratio</label>
+        <button type="button" onclick="runResize()">Resize Image</button>
+        <div id="resize-output" class="result-box"></div>
+      </div>
+      <h3>How to Use the Image Resizer</h3>
+      <ol>
+        <li>Pick a single image file from your computer or phone.</li>
+        <li>Enter your target width, height, or both in pixels.</li>
+        <li>Leave "Maintain aspect ratio" checked to prevent stretching, then click "Resize Image".</li>
+        <li>Click the download link to save your resized PNG.</li>
+      </ol>
+      <h3>Features</h3>
+      <ul>
+        <li>Automatic proportional scaling when only one dimension is entered.</li>
+        <li>Lossless PNG output for crisp graphics and screenshots.</li>
+        <li>100% free with no signup and zero server uploads.</li>
+        <li>Displays final pixel dimensions and file size in kilobytes.</li>
+      </ul>
+      <h3>Frequently Asked Questions</h3>
+      <details><summary>Will the resized image look stretched?</summary><p>If "Maintain aspect ratio" is checked and you supply one dimension, the other is calculated proportionally.</p></details>
+      <details><summary>Can I batch-resize several images?</summary><p>This tool resizes one image at a time so you can control exact pixel dimensions.</p></details>
+      <details><summary>What file type do I get?</summary><p>The resized output is always exported as a lossless PNG file.</p></details>
+    </section>
+
+    <!-- 3. Image Converter -->
+    <section id="convert-image" class="tool-section card">
+      <h2>Free Online Image Converter</h2>
+      <p class="lead">Switch between JPG, PNG, and WebP formats in a single click — 100% free, no signup, and files never leave your browser.</p>
+      <div class="tool-ui">
+        <label for="convert-input">Select image: <input type="file" id="convert-input" accept="image/*"></label>
+        <label for="convert-format">Target format:
+          <select id="convert-format">
+            <option value="image/jpeg">JPG</option>
+            <option value="image/png">PNG</option>
+            <option value="image/webp">WebP</option>
+          </select>
+        </label>
+        <button type="button" onclick="runConvert()">Convert Image</button>
+        <div id="convert-output" class="result-box"></div>
+      </div>
+      <h3>How to Use the Image Converter</h3>
+      <ol>
+        <li>Select the image you want to convert.</li>
+        <li>Choose JPG, PNG, or WebP from the target format dropdown.</li>
+        <li>Click "Convert Image" to re-encode it locally.</li>
+        <li>Download the converted file with its updated extension.</li>
+      </ol>
+      <h3>Features</h3>
+      <ul>
+        <li>Supports modern WebP alongside universal JPG and PNG formats.</li>
+        <li>All conversion happens in-browser, guaranteeing complete privacy.</li>
+        <li>Fast single-step workflow with no account or signup required.</li>
+        <li>Shows resulting format and file size before you download.</li>
+      </ul>
+      <h3>Frequently Asked Questions</h3>
+      <details><summary>Why choose WebP?</summary><p>WebP typically produces smaller files than JPG or PNG at comparable visual quality, ideal for websites.</p></details>
+      <details><summary>Can I convert animated GIFs?</summary><p>This converter processes static images and exports the first frame.</p></details>
+      <details><summary>Does the tool keep EXIF metadata?</summary><p>No — canvas re-encoding strips EXIF metadata, keeping your output clean and lightweight.</p></details>
+    </section>
+
+    <!-- 4. Image to PDF -->
+    <section id="image-to-pdf" class="tool-section card">
+      <h2>Free Online Image to PDF</h2>
+      <p class="lead">Turn one or many pictures into a printable A4 PDF document — 100% free, no signup, and files never leave your browser.</p>
+      <div class="tool-ui">
+        <label for="imgpdf-input">Select images: <input type="file" id="imgpdf-input" multiple accept="image/*"></label>
+        <button type="button" onclick="runImgToPdf()">Create PDF</button>
+        <div id="imgpdf-output" class="result-box"></div>
+      </div>
+      <h3>How to Use Image to PDF</h3>
+      <ol>
+        <li>Choose all pictures you want to include in your PDF.</li>
+        <li>Click "Create PDF" to place each image on its own A4 page.</li>
+        <li>Wait a moment while jsPDF centers and scales each image.</li>
+        <li>Download the combined <code>images.pdf</code> file.</li>
+      </ol>
+      <h3>Features</h3>
+      <ul>
+        <li>Automatic scaling to fit A4 (210×297 mm) while preserving aspect ratio.</li>
+        <li>Every image is centered cleanly on its own page.</li>
+        <li>Works completely offline in your browser — no server traffic.</li>
+        <li>100% free with no watermarks or page limits.</li>
+      </ul>
+      <h3>Frequently Asked Questions</h3>
+      <details><summary>What page size is used?</summary><p>Pages are standard A4 portrait (210 mm × 297 mm), with images scaled proportionally to fit.</p></details>
+      <details><summary>Can I combine multiple photos into one PDF?</summary><p>Yes — select multiple images in the file picker and each becomes a page in order.</p></details>
+      <details><summary>Are my documents uploaded anywhere?</summary><p>Never. jsPDF generates the PDF directly in browser memory.</p></details>
+    </section>
+
+    <!-- Mid page ad (between tools 4 and 5) -->
+    <div class="ad-placeholder">
+      <!-- Replace with AdSense ad unit code after approval -->
+      Mid-Content Banner – 728×90
+    </div>
+
+    <!-- 5. PDF Merge -->
+    <section id="pdf-merge" class="tool-section card">
+      <h2>Free Online PDF Merge</h2>
+      <p class="lead">Combine two or more PDFs into a single document — 100% free, no signup, and files never leave your browser.</p>
+      <div class="tool-ui">
+        <label for="pdfmerge-input">Select PDFs (minimum 2): <input type="file" id="pdfmerge-input" multiple accept="application/pdf"></label>
+        <button type="button" onclick="runPdfMerge()">Merge PDFs</button>
+        <div id="pdfmerge-output" class="result-box"></div>
+      </div>
+      <h3>How to Use PDF Merge</h3>
+      <ol>
+        <li>Select at least two PDF files from your device.</li>
+        <li>Press "Merge PDFs" to copy all pages into one document.</li>
+        <li>Download the combined <code>merged.pdf</code> file.</li>
+      </ol>
+      <h3>Features</h3>
+      <ul>
+        <li>Preserves original page quality, vector text, and layout.</li>
+        <li>Fast client-side merging powered by <code>pdf-lib</code>.</li>
+        <li>Zero-knowledge privacy — files never leave your computer.</li>
+        <li>100% free with no watermarks or daily caps.</li>
+      </ul>
+      <h3>Frequently Asked Questions</h3>
+      <details><summary>Will bookmarks be kept?</summary><p><code>pdf-lib</code> copies page contents accurately, though interactive outlines/bookmarks are not merged.</p></details>
+      <details><summary>How many PDFs can I merge?</summary><p>Any number that fits comfortably in your browser's memory.</p></details>
+      <details><summary>What about password-protected PDFs?</summary><p>Encrypted PDFs must be unlocked before merging, as client-side merging cannot bypass encryption.</p></details>
+    </section>
+
+    <!-- 6. QR Code Generator -->
+    <section id="qr-generator" class="tool-section card">
+      <h2>Free Online QR Code Generator</h2>
+      <p class="lead">Create a scannable QR code from any URL or text in seconds — 100% free, no signup, and generated offline.</p>
+      <div class="tool-ui">
+        <label for="qr-text">Enter text or URL: <input type="text" id="qr-text" placeholder="https://example.com"></label>
+        <label for="qr-size">Size (100–1000 px): <input type="number" id="qr-size" min="100" max="1000" value="300"></label>
+        <button type="button" onclick="runQr()">Generate QR</button>
+        <div id="qr-output" style="margin-top:1rem"></div>
+      </div>
+      <h3>How to Use the QR Code Generator</h3>
+      <ol>
+        <li>Paste a website link or type the text you want encoded.</li>
+        <li>Set the pixel size between 100 and 1000 (default 300 px).</li>
+        <li>Click "Generate QR" to render the code immediately.</li>
+        <li>Right-click the generated QR image and choose "Save image as...".</li>
+      </ol>
+      <h3>Features</h3>
+      <ul>
+        <li>Crisp, high-contrast QR rendering via QRCode.js.</li>
+        <li>Customizable dimensions from 100 px to 1000 px.</li>
+        <li>Client-side creation — no URL tracking or redirects.</li>
+        <li>100% free and works without an internet connection once loaded.</li>
+      </ul>
+      <h3>Frequently Asked Questions</h3>
+      <details><summary>Do these QR codes expire?</summary><p>No. The data is encoded directly into the QR pattern with no redirect server.</p></details>
+      <details><summary>What size should I use for printing?</summary><p>300 px to 600 px works well for flyers, business cards, and posters.</p></details>
+      <details><summary>Is my input logged?</summary><p>Never — QR generation happens entirely in your browser.</p></details>
+    </section>
+
+    <!-- 7. Word Counter -->
+    <section id="word-counter" class="tool-section card">
+      <h2>Free Online Word Counter</h2>
+      <p class="lead">Get instant live counts for words, characters, sentences, paragraphs, and reading time — 100% free, no signup.</p>
+      <div class="tool-ui">
+        <label for="wc-text">Your text:</label>
+        <textarea id="wc-text" rows="8" placeholder="Paste or type your text here..."></textarea>
+        <div class="stat-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.5rem;margin-top:1rem">
+          <div class="stat-card"><h4 id="wc-words">0</h4>Words</div>
+          <div class="stat-card"><h4 id="wc-chars">0</h4>Characters</div>
+          <div class="stat-card"><h4 id="wc-sentences">0</h4>Sentences</div>
+          <div class="stat-card"><h4 id="wc-paras">0</h4>Paragraphs</div>
+          <div class="stat-card"><h4 id="wc-time">0 m</h4>Read Time</div>
+        </div>
+      </div>
+      <h3>How to Use the Word Counter</h3>
+      <ol>
+        <li>Paste or type your essay, article, or social post into the text area.</li>
+        <li>Watch all five stat cards update live with every keystroke.</li>
+        <li>Check the estimated reading time based on 200 words per minute.</li>
+      </ol>
+      <h3>Features</h3>
+      <ul>
+        <li>Real-time counting on every input event with zero lag.</li>
+        <li>Reading time calculated at 200 words per minute, rounded up.</li>
+        <li>Tracks words, characters, sentences, and paragraphs simultaneously.</li>
+        <li>100% private — your text never leaves your browser.</li>
+      </ul>
+      <h3>Frequently Asked Questions</h3>
+      <details><summary>How is reading time calculated?</summary><p>It divides total words by an average adult reading speed of 200 words per minute and rounds up.</p></details>
+      <details><summary>Does it count spaces in characters?</summary><p>Yes, the character count reflects the total length of your text including spaces.</p></details>
+      <details><summary>Is my writing saved anywhere?</summary><p>No. Everything stays in memory on your device and disappears when you close the tab.</p></details>
+    </section>
+
+    <!-- 8. Password Generator -->
+    <section id="password-generator" class="tool-section card">
+      <h2>Free Online Password Generator</h2>
+      <p class="lead">Create cryptographically strong, random passwords in one click — 100% free, no signup, and generated locally.</p>
+      <div class="tool-ui">
+        <label for="pw-length">Length: <span id="pw-length-val">16</span><input type="range" id="pw-length" min="6" max="64" value="16"></label>
+        <label><input type="checkbox" id="pw-uc" checked> Uppercase (A–Z)</label>
+        <label><input type="checkbox" id="pw-lc" checked> Lowercase (a–z)</label>
+        <label><input type="checkbox" id="pw-num" checked> Numbers (0–9)</label>
+        <label><input type="checkbox" id="pw-sym" checked> Symbols (!@#$…)</label>
+        <button type="button" onclick="runPassword()">Generate Password</button>
+        <button type="button" onclick="copyPassword()">Copy Password</button>
+        <div id="pw-output" style="margin-top:1rem;font-family:monospace;font-size:1.1rem;background:#fff;border:1px solid var(--border);padding:.75rem;border-radius:8px;word-break:break-all;min-height:2.75rem"></div>
+      </div>
+      <h3>How to Use the Password Generator</h3>
+      <ol>
+        <li>Drag the length slider between 6 and 64 characters (16+ recommended).</li>
+        <li>Keep uppercase, lowercase, numbers, and symbols checked for maximum entropy.</li>
+        <li>Click "Generate Password" to create a new random string.</li>
+        <li>Click "Copy Password" to copy it directly to your clipboard.</li>
+      </ol>
+      <h3>Features</h3>
+      <ul>
+        <li>Uses Web Crypto API <code>crypto.getRandomValues()</code> for true randomness.</li>
+        <li>Customizable length from 6 to 64 characters.</li>
+        <li>One-click clipboard copy with confirmation.</li>
+        <li>100% client-side — generated passwords never leave your browser.</li>
+      </ul>
+      <h3>Frequently Asked Questions</h3>
+      <details><summary>Why use crypto.getRandomValues instead of Math.random?</summary><p><code>crypto.getRandomValues()</code> uses your operating system's cryptographically secure random number generator, making passwords unpredictable.</p></details>
+      <details><summary>Are generated passwords stored?</summary><p>Never. They exist only on your screen until you copy or replace them.</p></details>
+      <details><summary>What length is recommended?</summary><p>At least 16 characters with all four character types enabled is recommended for important accounts.</p></details>
+    </section>
+
+    <!-- Bottom ad -->
+    <div class="ad-placeholder">
+      <!-- Replace with AdSense ad unit code after approval -->
+      Bottom Responsive Banner – 728×90 (or responsive)
+    </div>
+  </main>
+</div>
+
+<section style="max-width:1200px;margin:2rem auto;padding:1.5rem;background:#fff;border:1px solid var(--border);border-radius:12px">
+  <h2 style="margin-bottom:1rem">📚 Latest Guides &amp; Tutorials</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem">
+    <a href="blog/compress-images-without-losing-quality.html" style="padding:1rem;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);display:block">
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem;color:var(--primary)">How to Compress Images Without Losing Quality</h3>
+      <p style="font-size:.9rem;color:var(--muted);margin:0">Proven techniques to reduce file size by 50-80% while keeping visual quality intact.</p>
+    </a>
+    <a href="blog/jpg-vs-png-vs-webp.html" style="padding:1rem;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);display:block">
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem;color:var(--primary)">JPG vs PNG vs WebP: Which Format to Use?</h3>
+      <p style="font-size:.9rem;color:var(--muted);margin:0">Complete comparison with real-world benchmarks and use case recommendations.</p>
+    </a>
+    <a href="blog/how-to-merge-pdf-files.html" style="padding:1rem;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);display:block">
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem;color:var(--primary)">How to Merge PDF Files on Any Device</h3>
+      <p style="font-size:.9rem;color:var(--muted);margin:0">Free methods for Windows, Mac, Android, and iOS with step-by-step instructions.</p>
+    </a>
+    <a href="blog/resize-images-for-social-media.html" style="padding:1rem;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);display:block">
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem;color:var(--primary)">10 Image Sizes for Social Media (2025)</h3>
+      <p style="font-size:.9rem;color:var(--muted);margin:0">Complete dimension cheat sheet for Instagram, Facebook, Twitter, LinkedIn, and more.</p>
+    </a>
+    <a href="blog/are-online-tools-safe.html" style="padding:1rem;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);display:block">
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem;color:var(--primary)">Are Online Tools Safe? Privacy Guide</h3>
+      <p style="font-size:.9rem;color:var(--muted);margin:0">Learn to identify safe client-side tools vs. tools that upload your files to servers.</p>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <h4>About FreeToolsHub</h4>
+    <p>Fast, free, privacy-first web utilities. No sign-up, no tracking, 100% client-side.</p>
+    <a href="about.html">Read more</a>
+  </div>
+  <div>
+    <h4>Image Tools</h4>
+    <ul style="list-style:none;padding:0">
+      <li><a href="#compress-image">Image Compressor</a></li>
+      <li><a href="#resize-image">Image Resizer</a></li>
+      <li><a href="#convert-image">Image Converter</a></li>
+      <li><a href="#image-to-pdf">Image to PDF</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Other Tools</h4>
+    <ul style="list-style:none;padding:0">
+      <li><a href="#pdf-merge">PDF Merge</a></li>
+      <li><a href="#qr-generator">QR Code Generator</a></li>
+      <li><a href="#word-counter">Word Counter</a></li>
+      <li><a href="#password-generator">Password Generator</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Legal</h4>
+    <ul style="list-style:none;padding:0">
+      <li><a href="blog/">Blog</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Use</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- CDN libraries -->
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+/* ==== ROUTING ==== */
+const showSection = (hash) => {
+  const validHash = hash && document.querySelector(hash) ? hash : '#compress-image';
+  document.querySelectorAll('.tool-section').forEach(s => s.classList.remove('active'));
+  const target = document.querySelector(validHash);
+  if (target) target.classList.add('active');
+
+  document.querySelectorAll('.side-link, .nav-link').forEach(l => l.classList.remove('active'));
+  document.querySelectorAll(`a[href="${validHash}"]`).forEach(l => l.classList.add('active'));
+
+  // Close mobile sidebar after navigation
+  const sb = document.getElementById('sidebar');
+  if (sb) sb.classList.remove('open');
+
+  window.scrollTo(0, 0);
+};
+window.addEventListener('hashchange', () => showSection(location.hash));
+window.addEventListener('load', () => showSection(location.hash || '#compress-image'));
+
+/* ==== SIDEBAR TOGGLE (mobile) ==== */
+const toggleSidebar = () => {
+  document.getElementById('sidebar').classList.toggle('open');
+};
+
+/* ==== TOOL 1: Image Compressor ==== */
+const runCompress = () => {
+  const files = document.getElementById('compress-input').files;
+  const quality = +document.getElementById('compress-quality').value / 100;
+  const out = document.getElementById('compress-output');
+  out.innerHTML = '';
+  if (!files.length) { alert('Please select at least one image.'); return; }
+  Array.from(files).forEach(file => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      canvas.getContext('2d').drawImage(img, 0, 0);
+      canvas.toBlob(blob => {
+        if (!blob) { alert('Compression failed for ' + file.name); return; }
+        const newSize = (blob.size / 1024).toFixed(1);
+        const saved = ((1 - blob.size / file.size) * 100).toFixed(0);
+        const dl = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = dl;
+        link.download = `compressed-${file.name.replace(/\.[^.]+$/, '')}.jpg`;
+        link.textContent = `${file.name} → ${newSize} KB (${saved}% saved) — Download`;
+        const div = document.createElement('div');
+        div.appendChild(link);
+        out.appendChild(div);
+        URL.revokeObjectURL(url);
+      }, 'image/jpeg', quality);
+    };
+    img.onerror = () => { alert('Cannot read ' + file.name); URL.revokeObjectURL(url); };
+    img.src = url;
+  });
+};
+document.getElementById('compress-quality').addEventListener('input', e => {
+  document.getElementById('compress-quality-val').textContent = `${e.target.value}%`;
+});
+
+/* ==== TOOL 2: Image Resizer ==== */
+const runResize = () => {
+  const file = document.getElementById('resize-input').files[0];
+  const wVal = +document.getElementById('resize-width').value;
+  const hVal = +document.getElementById('resize-height').value;
+  const maintain = document.getElementById('resize-aspect').checked;
+  const out = document.getElementById('resize-output');
+  out.innerHTML = '';
+  if (!file) { alert('Please select an image.'); return; }
+  const img = new Image();
+  const url = URL.createObjectURL(file);
+  img.onload = () => {
+    let w = wVal || img.naturalWidth;
+    let h = hVal || img.naturalHeight;
+    if (maintain) {
+      const ratio = img.naturalWidth / img.naturalHeight;
+      if (wVal && !hVal) h = Math.round(wVal / ratio);
+      else if (!wVal && hVal) w = Math.round(hVal * ratio);
+    }
+    const canvas = document.createElement('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+    canvas.toBlob(blob => {
+      const dl = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = dl;
+      link.download = `resized-${file.name.replace(/\.[^.]+$/, '')}.png`;
+      link.textContent = `${file.name} → ${w}×${h} px (${(blob.size / 1024).toFixed(1)} KB) — Download PNG`;
+      out.appendChild(link);
+    }, 'image/png');
+    URL.revokeObjectURL(url);
+  };
+  img.onerror = () => { alert('Cannot read ' + file.name); URL.revokeObjectURL(url); };
+  img.src = url;
+};
+
+/* ==== TOOL 3: Image Converter ==== */
+const runConvert = () => {
+  const file = document.getElementById('convert-input').files[0];
+  const mime = document.getElementById('convert-format').value;
+  const out = document.getElementById('convert-output');
+  out.innerHTML = '';
+  if (!file) { alert('Please select an image.'); return; }
+  const img = new Image();
+  const url = URL.createObjectURL(file);
+  img.onload = () => {
+    const canvas = document.createElement('canvas');
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    canvas.getContext('2d').drawImage(img, 0, 0);
+    const ext = mime === 'image/jpeg' ? 'jpg' : mime.split('/')[1];
+    canvas.toBlob(blob => {
+      const dl = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = dl;
+      link.download = `converted-${file.name.replace(/\.[^.]+$/, '')}.${ext}`;
+      link.textContent = `${file.name} → ${ext.toUpperCase()} (${(blob.size / 1024).toFixed(1)} KB) — Download`;
+      out.appendChild(link);
+    }, mime);
+    URL.revokeObjectURL(url);
+  };
+  img.onerror = () => { alert('Cannot read ' + file.name); URL.revokeObjectURL(url); };
+  img.src = url;
+};
+
+/* ==== TOOL 4: Image to PDF ==== */
+async function runImgToPdf(){
+  const files=document.getElementById('imgpdf-input').files;
+  const out=document.getElementById('imgpdf-output');
+  out.innerHTML='';
+  if(!files.length){alert('Select at least one image.');return;}
+  const {jsPDF}=window.jspdf;
+  const doc=new jsPDF();
+
+  const imagePromises = Array.from(files).map(file => new Promise((resolve, reject) => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      canvas.getContext('2d').drawImage(img, 0, 0);
+      const dataURL = canvas.toDataURL('image/jpeg');
+      URL.revokeObjectURL(url);
+      resolve(dataURL);
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('Cannot read '+file.name)); };
+    img.src = url;
+  }));
+
+  try {
+    const dataURLs = await Promise.all(imagePromises);
+    dataURLs.forEach((dataURL, i) => {
+      if(i > 0) doc.addPage();
+      const pageW = 210, pageH = 297;
+      const imgProps = doc.getImageProperties(dataURL);
+      const ratio = Math.min(pageW/imgProps.width, pageH/imgProps.height);
+      const imgW = imgProps.width * ratio;
+      const imgH = imgProps.height * ratio;
+      doc.addImage(dataURL, 'JPEG', (pageW-imgW)/2, (pageH-imgH)/2, imgW, imgH);
+    });
+    const blob = doc.output('blob');
+    const dl = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = dl;
+    link.download = 'images.pdf';
+    link.textContent = 'Download PDF ('+files.length+' pages)';
+    out.appendChild(link);
+  } catch(err) {
+    alert(err.message);
+  }
+}
+
+/* ==== TOOL 5: PDF Merge ==== */
+const runPdfMerge = async () => {
+  const files = document.getElementById('pdfmerge-input').files;
+  const out = document.getElementById('pdfmerge-output');
+  out.innerHTML = '';
+  if (files.length < 2) { alert('Please select at least two PDF files.'); return; }
+  try {
+    const { PDFDocument } = window.PDFLib;
+    const mergedPdf = await PDFDocument.create();
+    for (const f of files) {
+      const bytes = await f.arrayBuffer();
+      const pdf = await PDFDocument.load(bytes);
+      const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
+      copiedPages.forEach(p => mergedPdf.addPage(p));
+    }
+    const mergedBytes = await mergedPdf.save();
+    const blob = new Blob([mergedBytes], { type: 'application/pdf' });
+    const dl = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = dl;
+    link.download = 'merged.pdf';
+    link.textContent = `Download Merged PDF (${files.length} documents)`;
+    out.appendChild(link);
+  } catch (err) {
+    alert('Error merging PDFs: ' + err.message);
+  }
+};
+
+/* ==== TOOL 6: QR Code Generator ==== */
+const runQr = () => {
+  const txt = document.getElementById('qr-text').value.trim();
+  const size = Math.min(1000, Math.max(100, +document.getElementById('qr-size').value || 300));
+  const out = document.getElementById('qr-output');
+  out.innerHTML = '';
+  if (!txt) { alert('Please enter text or a URL.'); return; }
+  new QRCode(out, { text: txt, width: size, height: size });
+};
+
+/* ==== TOOL 7: Word Counter ==== */
+document.getElementById('wc-text').addEventListener('input', e => {
+  const txt = e.target.value;
+  const words = txt.trim() ? txt.trim().split(/\s+/).length : 0;
+  const chars = txt.length;
+  const sentences = txt.trim() ? txt.split(/[.!?]+/).filter(s => s.trim().length > 0).length : 0;
+  const paras = txt.trim() ? txt.split(/\n+/).filter(p => p.trim().length > 0).length : 0;
+  const time = words ? Math.ceil(words / 200) : 0;
+  document.getElementById('wc-words').textContent = words;
+  document.getElementById('wc-chars').textContent = chars;
+  document.getElementById('wc-sentences').textContent = sentences;
+  document.getElementById('wc-paras').textContent = paras;
+  document.getElementById('wc-time').textContent = `${time} m`;
+});
+
+/* ==== TOOL 8: Password Generator ==== */
+function runPassword(){
+  const length=+document.getElementById('pw-length').value;
+  const sets=[];
+  if(document.getElementById('pw-uc').checked) sets.push('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+  if(document.getElementById('pw-lc').checked) sets.push('abcdefghijklmnopqrstuvwxyz');
+  if(document.getElementById('pw-num').checked) sets.push('0123456789');
+  if(document.getElementById('pw-sym').checked) sets.push('!@#$%^&*()_+~`|}{[]:;?><,./-=');
+  if(!sets.length){alert('Select at least one character type.');return;}
+  const all=sets.join('');
+  const n = all.length;
+  const maxValid = Math.floor(0xFFFFFFFF / n) * n;
+  let pwd='';
+  while(pwd.length < length){
+    const buf = new Uint32Array(length * 2);
+    crypto.getRandomValues(buf);
+    for(let i=0; i<buf.length && pwd.length<length; i++){
+      if(buf[i] < maxValid){
+        pwd += all[buf[i] % n];
+      }
+    }
+  }
+  document.getElementById('pw-output').textContent=pwd;
+}
+document.getElementById('pw-length').addEventListener('input', e => {
+  document.getElementById('pw-length-val').textContent = e.target.value;
+});
+const copyPassword = () => {
+  const txt = document.getElementById('pw-output').textContent;
+  if (!txt) { alert('Generate a password first.'); return; }
+  navigator.clipboard.writeText(txt).then(() => alert('Password copied!')).catch(() => alert('Copy failed.'));
+};
+</script>
+</body>
+</html>
