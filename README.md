@@ -3,7 +3,7 @@
 Free, 100% client-side online tools for images, PDFs, and everyday
 utilities. No signup, no file uploads, no tracking.
 
-**Live site:** https://freetoolshub.pages.dev (after deploy)
+**Live site:** https://freetoolzhub.pages.dev (after deploy)
 
 ## Features
 - 🖼️ Image Compressor, Resizer, Converter (JPG/PNG/WebP)

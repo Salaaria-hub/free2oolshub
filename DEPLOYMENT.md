@@ -2,7 +2,7 @@
 
 ## Current Status
 Site is ready to deploy on Cloudflare Pages free tier.
-Temporary URL: https://freetoolshub.pages.dev
+Temporary URL: https://freetoolzhub.pages.dev
 Custom domain (later): freetoolshub.com (not purchased yet)
 
 ## Pre-Deployment Checklist
@@ -24,22 +24,22 @@ Custom domain (later): freetoolshub.com (not purchased yet)
    /blog/compress-images-without-losing-quality.html
    etc.
 5. Click "Deploy site"
-6. Live URL: https://freetoolshub.pages.dev
+6. Live URL: https://freetoolzhub.pages.dev
 
 ## Post-Deployment (Day 1)
-1. Test all 8 tools at https://freetoolshub.pages.dev
+1. Test all 8 tools at https://freetoolzhub.pages.dev
 2. Test mobile view
 3. Submit to Google Search Console:
-   - Add property: https://freetoolshub.pages.dev
+   - Add property: https://freetoolzhub.pages.dev
    - Verify ownership
-   - Submit sitemap: https://freetoolshub.pages.dev/sitemap.xml
+   - Submit sitemap: https://freetoolzhub.pages.dev/sitemap.xml
    - Request indexing for homepage
 
 ## Custom Domain (Month 2-3)
 1. Buy domain (~₹750/year) from Cloudflare Registrar or Namecheap
 2. Cloudflare Pages → project → Custom domains → Add domain
 3. Follow DNS instructions (auto if domain is on Cloudflare)
-4. Replace "freetoolshub.pages.dev" with new domain in ALL files
+4. Replace "freetoolzhub.pages.dev" with new domain in ALL files
 5. Re-deploy on Cloudflare Pages
 6. Old .pages.dev URLs auto-redirect to new domain
 
